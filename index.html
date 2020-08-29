@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="./client.js"></script>
+  <title>Roshan Optic World</title>
+</head>
+<body>
+  <div class="alert hide">
+    <!-- MessageComesHere -->
+  </div>
+  <div class="header">
+    <div class="master-logo"><img src="image/27106.svg" alt="Master Icon"></div>
+    <span class="logo">Roshan Optic W<i class="fa fa-globe"></i>rld</span>
+  </div>
+  <div class="header-text-container">
+    <div class="header-primary-text">
+      One stop solution to get a perfect eyeware that fits your eye
+      <div class="header-secondary-text">There are three simple methods, by which you can help us find best eyeware that fits your need</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="blog-post">
+      <div class="blog-post_img">
+        <img src="image/img1.webp" alt="method1">
+      </div>
+      <div class="blog-post_info">
+        <div class="blog-post_date">
+          <span>Method 1</span>
+        </div>
+        <h1 class="blog-post_title">Using your existing eyeware measurements</h1>
+        <p class="blog-post_text">
+          You can find your eyeware measurements by looking at the inner
+          side of the frame. The image here will help you to find 
+          your eyeware measurements. Please enter the details below respectively.
+        </p>
+        <form id="method1">
+          <div class="form-input-container">
+            <label for="name1">Name</label>
+            <input type="text" id="name1" required maxlength="50" minlength="3">
+            <label for="ph1">Contact Number</label>
+            <input type="text" id="ph1" required maxlength="12">
+            <label for="lensW">Lens Width</label>
+            <input type="text" id="lensW" required>
+            <label for="bridgeW">Bridge Width</label>
+            <input type="text" id="bridgeW" required>
+            <label for="templeL">Temple Length</label>
+            <input type="text" id="templeL" required>
+          </div>
+          <div class="btncontainer">
+            <button form="method1" type="submit" class="blog-post_cta">Send <i class="fa fa-whatsapp"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="blog-post">
+      <div class="blog-post_img">
+        <img src="image/img2.jpg" alt="method2">
+      </div>
+      <div class="blog-post_info">
+        <div class="blog-post_date">
+          <span>Method 2</span>
+        </div>
+        <h1 class="blog-post_title">Using your Frame Width</h1>
+        <p class="blog-post_text">
+          You can opt this method if the measurements of your eyeware are not clear when checked using previous method.
+          Measure the distance between two screws with a scale as shown in the image (i.e Frame Width) and enter the details below.
+        </p>
+        <form id="method2">
+          <div class="form-input-container">
+              <label for="name2">Name</label>
+              <input type="text" id="name2" required maxlength="50" minlength="3">
+              <label for="ph2">Contact Number</label>
+              <input type="text" id="ph2" required maxlength="12">
+              <label for="frameW">Frame Width</label>
+              <input type="text" id="frameW" required>
+          </div>
+          <div class="btncontainer">
+            <button form="method2" type="submit" class="blog-post_cta">Send <i class="fa fa-whatsapp"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="blog-post">
+      <div class="blog-post_img">
+        <img src="image/img3.jpg" alt="method3">
+      </div>
+      <div class="blog-post_info">
+        <div class="blog-post_date">
+          <span>Method 3</span>
+        </div>
+        <h1 class="blog-post_title">Using Temple to Temple Distance</h1>
+        <p class="blog-post_text">
+          If you dont have an existing eyeware, the red spots as shown in the image are temple points. 
+          Measure the distance between those two points and enter the details below.
+        </p>
+        <form id="method3">
+          <div class="form-input-container">
+              <label for="name3">Name</label>
+              <input type="text" id="name3" required maxlength="50" minlength="3">
+              <label for="ph3">Contact Number</label>
+              <input type="text" id="ph3" required maxlength="12">
+              <label for="itd">Inter Temple Distance</label>
+              <input type="text" id="itd" required>
+          </div>
+          <div class="btncontainer">
+            <button form="method3" type="submit" class="blog-post_cta">Send <i class="fa fa-whatsapp"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
