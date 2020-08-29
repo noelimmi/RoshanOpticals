@@ -48,7 +48,7 @@ function sendWhatsAppMessage(messageTemplate,formId){
   var authHeader = "Basic " + window.btoa(accountId + ":" +accountSec);
   var resourceUrl = "https://api.twilio.com/2010-04-01/Accounts/"+accountId+"/Messages.json"; 
   var twilioNumber = "whatsapp:+14155238886";
-  var myNumber = "whatsapp:+919677861230";
+  var myNumber = "whatsapp:+919080959319";
   var reqBody = "To=" + encodeURIComponent(myNumber) + "&" + "From=" + encodeURIComponent(twilioNumber) + "&" + "Body=" + encodeURIComponent(messageTemplate);
   fetch(resourceUrl,{
     method: 'POST', 
