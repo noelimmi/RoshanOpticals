@@ -75,7 +75,7 @@ function showalert(type,message){
   alertElement.classList.remove("hide");
   alertElement.classList.add(type);
   alertElement.innerHTML = message;
-  setTimeout(()=>alertElement.style.setProperty("display", "none"),5000)
+  setTimeout(()=>alertElement.classList.add("hide"),5000)
 }
 
 function clearFormValues(fieldsToBeFetched){
