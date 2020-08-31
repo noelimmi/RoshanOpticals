@@ -25,8 +25,8 @@ window.addEventListener('load',function(){
     var submitedMtd = formList[formIdIndex];
     changeButtonState(submitedMtd,true);
     var fieldsToBeFetched = methodVsFields[submitedMtd];
-    var messageTemplate = "Your {{1}} code is {{2}}";
-    messageTemplate = messageTemplate.replace("{{1}}","order of "+submitedMtd);
+    var messageTemplate = "Your order details are as follow {{2}}";
+    //messageTemplate = messageTemplate.replace("{{1}}","order of "+submitedMtd);
     var userDetails = "";
     for(var fieldId of fieldsToBeFetched){
       userDetails += fieldVsProperName[fieldId] + " - " + document.querySelector("#"+fieldId).value + " | ";
@@ -43,22 +43,19 @@ function changeButtonState(formId,isLoading) {
 }
 
 function sendWhatsAppMessage(messageTemplate,formId){
-  var accountId = "AC7fb0d23943252cae7c5b33606110b793";
-  var accountSec = "63059b199d4537cea5275d13c9e62022";
-  var authHeader = "Basic " + window.btoa(accountId + ":" +accountSec);
-  var resourceUrl = "https://api.twilio.com/2010-04-01/Accounts/"+accountId+"/Messages.json"; 
-  var twilioNumber = "whatsapp:+14155238886";
-  var myNumber = "whatsapp:+919080959319";
-  var reqBody = "To=" + encodeURIComponent(myNumber) + "&" + "From=" + encodeURIComponent(twilioNumber) + "&" + "Body=" + encodeURIComponent(messageTemplate);
+  //var accountId = "AC7fb0d23943252cae7c5b33606110b793";
+  //var accountSec = "63059b199d4537cea5275d13c9e62022";
+  //var authHeader = "Basic " + window.btoa(accountId + ":" +accountSec);
+  //https://api.callmebot.com/whatsapp.php?phone=+919344046438&text=This+is+a+test&apikey=898514
+  var resourceUrl = "https://api.callmebot.com/whatsapp.php?phone=+919344046438&text="+encodeURIComponent(messageTemplate)+"&apikey=898514"; 
+  //var twilioNumber = "whatsapp:+14155238886";
+  //var myNumber = "whatsapp:+919677861230";
+  //var reqBody = "To=" + encodeURIComponent(myNumber) + "&" + "From=" + encodeURIComponent(twilioNumber) + "&" + "Body=" + encodeURIComponent(messageTemplate);
+  
   fetch(resourceUrl,{
-    method: 'POST', 
+    method: 'GET', 
     mode: 'cors',
     cache: 'no-cache',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'Authorization': authHeader
-    },
-    body: reqBody
   }).then(function(){
     showalert("success","You have sent us your measurements. Thank you :)");
     changeButtonState(formId,false);

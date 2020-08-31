@@ -18,6 +18,8 @@ img{
 }
 
 .header {
+  height: 115px;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,6 +37,9 @@ img{
   font-size: 25px;
   color: rgba(0,0,0,.9);
   font-weight: bold;
+}
+.logo{
+  color: #fff !important;
 }
 
 .logo i{
