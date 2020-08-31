@@ -54,7 +54,7 @@ function sendWhatsAppMessage(messageTemplate,formId){
   
   fetch(resourceUrl,{
     method: 'GET', 
-    mode: 'cors',
+    mode: 'no-cors',
     cache: 'no-cache',
   }).then(function(){
     showalert("success","You have sent us your measurements. Thank you :)");
